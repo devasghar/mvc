@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{title}}{% endblock %}
+
+{% block title %}
+<h1>{{title}}</h1>
+{% endblock %}
+
+{% block body %}
+{{ class | raw }}
+{{ message | raw }}
+{{ trace | raw}}
+{{ track | raw}}
+{% endblock %}
