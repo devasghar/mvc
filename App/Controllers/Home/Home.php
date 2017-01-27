@@ -13,6 +13,13 @@ class Home extends \Core\Controller
         ]);
     }
 
+    public function config(){
+        View::twigRender('Home/config.html', [
+            'page_title' => 'Configuration',
+            'title' => 'MVC <small> Configuration </small>',
+        ]);
+    }
+
     protected function before(){
 
     }
