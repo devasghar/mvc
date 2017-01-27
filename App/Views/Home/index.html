@@ -3,25 +3,9 @@
 {% block page_title %}{{page_title}}{% endblock %}
 
 {% block title %}
-{{ title }}
-{{ endblock }}
-    <table border="1" cellspacing="5" cellpadding="15">
-        <tr><th colspan="3">My Configuration Table</th></tr>
-        <tr>
-            <th>ID</th>
-            <th>Entity ID</th>
-            <th>Configuration</th>
-        </tr>
-    {% for rec in recs %}
-        <tr>
-            <td>{{rec.id}}</td>
-            <td>{{rec.entity_id}}</td>
-            <td>{{rec.config}}</td>
-        </tr>
-    {% endfor %}
-    </table>
+{{ title | raw }}
 {% endblock %}
 
 {% block body %}
-    <p>This is the page body ...</p>
+   
 {% endblock %}

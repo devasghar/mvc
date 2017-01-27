@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{page_title}}{% endblock %}
+
+{% block title %}
+{{ title | raw }}
+{% endblock %}
+
+{% block body %}
+<table class="table table-responsive">
+    <tr><th colspan="3">My Configuration Table</th></tr>
+    <tr>
+        <th>ID</th>
+        <th>Entity ID</th>
+    </tr>
+    {% for rec in recs %}
+    <tr>
+        <td>{{rec.id}}</td>
+        <td>{{rec.entity_id}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

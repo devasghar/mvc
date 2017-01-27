@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\Main;
+use Core\View;
+
 class Posts extends \Core\Controller
 {
-    public function addAction(){
-        print "Adding the new post.";
+    public function viewAction(){
+        $recs = Main::getAll();
+        View::twigRender('Home/posts.html', ['title' => 'Posts','recs' => $recs]);
     }
 
     public function deleteAction(){

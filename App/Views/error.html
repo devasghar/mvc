@@ -5,10 +5,13 @@
 {% block title %}
 <h1>{{title}}</h1>
 {% endblock %}
-
 {% block body %}
-{{ class | raw }}
-{{ message | raw }}
-{{ trace | raw}}
-{{ track | raw}}
+<div class="row">
+    <div class="col-md-push-2 col-md-8">
+        {{ class | raw }}
+        {{ message | raw }}
+        {{ trace | raw}}
+        {{ track | raw}}
+    </div>
+</div>
 {% endblock %}
