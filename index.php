@@ -18,7 +18,7 @@ $router = new Core\Router();
 $router->add('', ['controller'=> 'Home', 'action' => 'index', 'namespace' => 'Home']);
 $router->add('config', ['controller'=> 'Home', 'action' => 'config', 'namespace' => 'Home']);
 $router->add('{controller}/{action}');
-$router->add('{controller}/{id:\d+}/{action}');
+$router->add('{controller}/{id:\d+}/{action}'); content/123/edit
 $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 $router->add('admin/{controller}/{id:\d+}/{action}', ['namespace' => 'Admin']);
 
