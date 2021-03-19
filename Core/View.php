@@ -2,15 +2,19 @@
 
 namespace Core;
 
-class View
-{
-    public static function twigRender($template, $args = []){
-        static $twig = null;
-        if($twig == null){
-            $loader = new \Twig_Loader_Filesystem('App/Views');
-            $twig = new \Twig_Environment($loader);
-        }
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
-        print $twig->render($template, $args);
+class View {
+
+  public static function twigRender($template, $args = []) {
+    static $twig = NULL;
+    if ($twig == NULL) {
+      $loader = new FilesystemLoader('App/Views');
+      $twig = new Environment($loader);
     }
+
+    print $twig->render($template, $args);
+  }
+
 }

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Core\Model;
 use PDO;
 
-class Main extends \Core\Model
+class Main extends Model
 {
     public static function getAll(){
         $db = static::getConnection();

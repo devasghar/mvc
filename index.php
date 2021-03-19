@@ -1,24 +1,17 @@
 <?php
 
-/*
- * Twig Templating
- */
-require_once 'Vendor/Twig-1.30.0/lib/Twig/Autoloader.php';
-Twig_Autoloader::register();
+use Core\Config;
+use Core\Router;
 
-spl_autoload_register(function($class){
-    $root = dirname(__DIR__);
-    $file =  str_replace('\\', '/', $class) . '.php';
-    if(is_readable($file)){
-        require $file;
-    }
-});
+require './Vendor/autoload.php';
 
-$router = new Core\Router();
+$config = new Config();
+
+$router = new Router();
 $router->add('', ['controller'=> 'Home', 'action' => 'index', 'namespace' => 'Home']);
 $router->add('config', ['controller'=> 'Home', 'action' => 'config', 'namespace' => 'Home']);
 $router->add('{controller}/{action}');
-$router->add('{controller}/{id:\d+}/{action}'); content/123/edit
+$router->add('{controller}/{id:\d+}/{action}');
 $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 $router->add('admin/{controller}/{id:\d+}/{action}', ['namespace' => 'Admin']);
 
