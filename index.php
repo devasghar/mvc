@@ -9,10 +9,11 @@ $config = new Config();
 
 $router = new Router();
 $router->add('', ['controller'=> 'Home', 'action' => 'index', 'namespace' => 'Home']);
+$router->add('user', ['controller'=> 'User', 'action' => 'index', 'namespace' => 'User']);
 $router->add('config', ['controller'=> 'Home', 'action' => 'config', 'namespace' => 'Home']);
 $router->add('{controller}/{action}');
 $router->add('{controller}/{id:\d+}/{action}');
-$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
+$router->add('admin/{controller}/', ['namespace' => 'Admin']);
 $router->add('admin/{controller}/{id:\d+}/{action}', ['namespace' => 'Admin']);
 
 

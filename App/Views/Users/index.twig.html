@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{page_title}}{% endblock %}
+
+{% block title %}
+{{ title | raw }}
+{% endblock %}
+
+{% block body %}
+<table class="table table-responsive">
+    <tr><th colspan="3">Users List</th></tr>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>Password</th>
+    </tr>
+    {% for rec in recs %}
+    <tr>
+        <td>{{rec.id}}</td>
+        <td>{{rec.name}}</td>
+        <td>{{rec.password}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

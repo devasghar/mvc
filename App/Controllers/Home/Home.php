@@ -2,9 +2,10 @@
 
 namespace App\Controllers\Home;
 
+use Core\Controller;
 use \Core\View;
 
-class Home extends \Core\Controller
+class Home extends Controller
 {
     public function indexAction(){
         View::twigRender('Home/index.html', [

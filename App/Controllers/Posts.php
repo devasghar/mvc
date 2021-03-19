@@ -3,9 +3,10 @@
 namespace App\Controllers;
 
 use App\Models\Main;
+use Core\Controller;
 use Core\View;
 
-class Posts extends \Core\Controller
+class Posts extends Controller
 {
     public function viewAction(){
         $recs = Main::getAll();

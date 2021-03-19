@@ -2,9 +2,10 @@
 
 namespace App\Controllers\Admin;
 
+use Core\Controller;
 use Core\View;
 
-class Users extends \Core\Controller
+class Users extends Controller
 {
 
     public function indexAction(){
@@ -16,10 +17,10 @@ class Users extends \Core\Controller
     }
 
     public function before(){
-        print "(Before)";
+        print "Perform some action before the page is loaded";
     }
 
     public function after(){
-        print "(After)";
+        print "Perform some action after the page is loaded";
     }
 }
