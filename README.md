@@ -1,7 +1,7 @@
-#MVC Starterkit
+# MVC Starterkit
 version (1.0.1)
 
-#Getting Started
+# Getting Started
 Clone the project `git clone git@github.com:devasghar/mvc.git`.
  
 1. Run `composer install`
